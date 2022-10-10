@@ -26,7 +26,7 @@ public class App {
                     if (num > largestNumber) {
                         largestNumber = num;
                     }
-                    if () {
+                    if (a == 0) {
                         System.out.print("No number entered");
                     }
                 }
@@ -119,25 +119,39 @@ public class App {
     //todo Task 5
     public void marks() {
         // input your solution here
-
+        int grade = 0;
         int a;
         double sum = 0;
-
-
-        for (a = 1; a <= 1; a++) {
-            System.out.print("Mark " + a + ": ");
-
-        }
         Scanner scanner = new Scanner(System.in);
-        int grade = scanner.nextInt();
-        sum = sum + grade;
-        if (grade > 5 || grade < 1) {
-            System.out.print("Average: " + sum %2f);
+        int count = 0;
+        int b;
+        int negativeMarks = 0;
 
+        for (b=0; b <= grade; b++) {
+            for (a = 1; a >= 1; a++) {
+                System.out.print("Mark " + a + ": ");
+                grade = scanner.nextInt();
+                count++;
+                sum = sum + grade;
+
+                double average = sum / count;
+
+                if (grade > 5 || grade < 0) {
+                    System.out.println("Invalid mark!");
+                }
+                if (grade == 5) {
+                    negativeMarks++;
+                }
+                if (grade == 0) {
+                    System.out.println("Average: " + String.format("%.2f", average));
+                    System.out.println("Negative marks: " + negativeMarks);
+                    break;
+                }
 
         }
 
-        //double average = sum
+
+        }
 
     }
 
