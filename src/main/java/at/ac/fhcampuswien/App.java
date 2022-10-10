@@ -28,14 +28,16 @@ public class App {
         if (i <= 0) {
             System.out.println("Invalid number!");
         }
+        String string;
 
         int lines;
         int numbers;
-        for (lines = 0; lines < i; lines++) {
-            for (numbers = 1; numbers < i; numbers++) {
-                System.out.println("i");
+        for (lines = 0; lines <= i; lines++) {
+            for (numbers = 1; numbers <= i; numbers++) {
+                if (lines >= numbers)
+                    System.out.print(numbers);
             }
-            System.lineSeparator();
+            System.out.println();
         }
 
 }
@@ -62,11 +64,14 @@ public class App {
     public void printRhombus(){
         // input your solution here
         Scanner scanner = new Scanner(System.in);
+        System.out.print("h: ");
         int h = scanner.nextInt();
+        System.out.print("c: ");
         char c = scanner.next().charAt(0);
         if (h % 2 == 0) {
             System.out.println("Invalid number!");
         }
+
         int b;
         int d;
         int e;
