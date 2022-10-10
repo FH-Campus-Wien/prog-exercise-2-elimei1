@@ -40,20 +40,20 @@ public class App {
             System.out.println();
         }
 
-}
+    }
 
 
     //todo Task 3
-    public void printPyramid(){
+    public void printPyramid() {
         // input your solution here
         int a = 6;
         int b;
         int c;
         int d;
-    for (b = 1; b <= a; b++) {          // counts up until six lines are reached
+        for (b = 1; b <= a; b++) {          // counts up until six lines are reached
             for (c = 5; c >= b; c--)    //counts down until spaces have reached 1
                 System.out.print(" ");
-            for (d = 1; d < 2*b; d++)   // counts up until * have reached 2 times the line number (-1)
+            for (d = 1; d < 2 * b; d++)   // counts up until * have reached 2 times the line number (-1)
                 System.out.print("*");
 
             System.out.print(System.lineSeparator());
@@ -61,7 +61,7 @@ public class App {
     }
 
     //todo Task 4
-    public void printRhombus(){
+    public void printRhombus() {
         // input your solution here
         Scanner scanner = new Scanner(System.in);
         System.out.print("h: ");
@@ -98,22 +98,22 @@ public class App {
     }
 
     //todo Task 5
-    public void marks(){
+    public void marks() {
         // input your solution here
 
         int a;
         int sum = 0;
 
 
-        for (a = 1; a <=1; a++) {
+        for (a = 1; a <= 1; a++) {
             System.out.print("Mark " + a + ":");
 
         }
         Scanner scanner = new Scanner(System.in);
         int grade = scanner.nextInt();
         sum = sum + grade;
-            if (grade > 5 || grade < 1) {
-                System.out.print("Average: " + sum);
+        if (grade > 5 || grade < 1) {
+            System.out.print("Average: " + sum);
 
 
         }
@@ -123,34 +123,36 @@ public class App {
     }
 
     //todo Task 6
-    public void happyNumbers(){
+    public int happyNumbers() {
         // input your solution here
-        Scanner scanner =  new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int sum = 0;
         int singleDigit = 1;
 
         System.out.print("n: ");
         int number = scanner.nextInt();
-
-
-
+        while (number > 9) {
             while (number > 0) {
                 singleDigit = number % 10;
                 sum = (sum + (singleDigit * singleDigit));
                 number = number / 10;
+
             }
-
             number = sum;
-
+            sum = 0;
+        }
 
         if (number == 1) {
             System.out.println("Happy number!");
 
-        }
-        else {
+        } else {
             System.out.println("Sad number!");
         }
+
+        return sum;
     }
+
+
 
     public static void main(String[] args){
         App exercise2 = new App();
