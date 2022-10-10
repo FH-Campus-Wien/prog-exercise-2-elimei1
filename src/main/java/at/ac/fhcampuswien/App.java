@@ -10,36 +10,36 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         double num = scanner.nextDouble();
         double largestNumber = Double.MAX_VALUE;
-
-        double d;
-        for (d = 0; d < num; d++) {
-            int current = scanner.nextInt();
-            if (current > largestNumber) {
-                largestNumber = current;
+        int a;
+        for (a = 1; a <= 1; a++) {
+            System.out.println("Number " + a + ":");
+            if (num <= 0) {
+                System.out.println("The largest number is " + largestNumber);
             }
-
         }
-        if (num <= 0) {
-            System.out.println("The largest number is " + largestNumber);
-        }
-
-
     }
 
+
     //todo Task 2
-    public void stairs(){
+    public void stairs() {
         // input your solution here
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         if (i <= 0) {
             System.out.println("Invalid number!");
         }
-        System.out.println(" ");
-        int a;
-        for (a = 1; a <= i; ++a) {
-            System.out.println("i");
+
+        int lines;
+        int numbers;
+        for (lines = 0; lines < i; lines++) {
+            for (numbers = 1; numbers < i; numbers++) {
+                System.out.println("i");
+            }
+            System.lineSeparator();
         }
-    }
+
+}
+
 
     //todo Task 3
     public void printPyramid(){
