@@ -8,21 +8,37 @@ public class App {
     public void largestNumber() {
         // input your solution here
         Scanner scanner = new Scanner(System.in);
-        double num = scanner.nextDouble();
-        double largestNumber = Double.MAX_VALUE;
-        int a;
-        for (a = 1; a <= 1; a++) {
-            System.out.println("Number " + a + ":");
-            if (num <= 0) {
-                System.out.println("The largest number is " + largestNumber);
+        int a = 0;
+        double largestNumber = 0;
+        double num = 1;
+        int b;
+
+            for (b = 0; b < num; b++) {
+
+                for (a = 1; a > 0; a++) {
+                    System.out.print("Number " + a + ": ");
+                    num = scanner.nextDouble();
+
+                    if (num <= 0) {
+                        System.out.println("The largest number is " + String.format("%.2f", largestNumber) );
+                        break;
+                    }
+                    if (num > largestNumber) {
+                        largestNumber = num;
+                    }
+                    if () {
+                        System.out.print("No number entered");
+                    }
+                }
             }
-        }
+
     }
 
 
     //todo Task 2
     public void stairs() {
         // input your solution here
+        System.out.print("n: ");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         if (i <= 0) {
@@ -63,37 +79,40 @@ public class App {
     //todo Task 4
     public void printRhombus() {
         // input your solution here
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("h: ");
-        int h = scanner.nextInt();
-        System.out.print("c: ");
-        char c = scanner.next().charAt(0);
-        if (h % 2 == 0) {
-            System.out.println("Invalid number!");
-        }
-
         int b;
         int d;
         int e;
         int g;
         int f;
-        for (b = 1; b <= 4; b++) {          // without ASCII until now
-            for (d = 4 - b; d >= 1; d--) {
-                System.out.print(" ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("h: ");
+        int h = scanner.nextInt();
+        System.out.print("c: ");
+        char c = scanner.next().charAt(0);
+
+        if (h % 2 == 0) {
+            System.out.println("Invalid number!");
+        } else {
+
+            for (b = 1; b <= 4; b++) {          // without ASCII until now
+                for (d = 4 - b; d >= 1; d--) {
+                    System.out.print(" ");
+                }
+                for (e = 1; e <= 2 * b - 1; e++) {
+                    System.out.print("*");
+                }
+                System.out.println();
             }
-            for (e = 1; e <= 2 * b - 1; e++) {
-                System.out.print("*");
+            for (int a = 1; a <= 3; a++) {
+                for (g = 1; g <= a; g++) {
+                    System.out.print(" ");
+                }
+                for (f = 5; f >= 2 * a - 1; f -= 1) {
+                    System.out.print("*");
+                }
+                System.out.println();
             }
-            System.out.println();
-        }
-        for (int a = 1; a <= 3; a++) {
-            for (g = 1; g <= a; g++) {
-                System.out.print(" ");
-            }
-            for (f = 5; f >= 2 * a - 1; f -= 1) {
-                System.out.print("*");
-            }
-            System.out.println();
+
         }
     }
 
@@ -102,18 +121,18 @@ public class App {
         // input your solution here
 
         int a;
-        int sum = 0;
+        double sum = 0;
 
 
         for (a = 1; a <= 1; a++) {
-            System.out.print("Mark " + a + ":");
+            System.out.print("Mark " + a + ": ");
 
         }
         Scanner scanner = new Scanner(System.in);
         int grade = scanner.nextInt();
         sum = sum + grade;
         if (grade > 5 || grade < 1) {
-            System.out.print("Average: " + sum);
+            System.out.print("Average: " + sum %2f);
 
 
         }
@@ -149,7 +168,7 @@ public class App {
             System.out.println("Sad number!");
         }
 
-        return sum;
+        return sum;  // java suggests it for me, I don't know why
     }
 
 
