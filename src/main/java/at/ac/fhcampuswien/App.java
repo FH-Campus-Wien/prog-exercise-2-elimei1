@@ -100,11 +100,56 @@ public class App {
     //todo Task 5
     public void marks(){
         // input your solution here
+
+        int a;
+        int sum = 0;
+
+
+        for (a = 1; a <=1; a++) {
+            System.out.print("Mark " + a + ":");
+
+        }
+        Scanner scanner = new Scanner(System.in);
+        int grade = scanner.nextInt();
+        sum = sum + grade;
+            if (grade > 5 || grade < 1) {
+                System.out.print("Average: " + sum);
+
+
+        }
+
+        //double average = sum
+
     }
 
     //todo Task 6
     public void happyNumbers(){
         // input your solution here
+        Scanner scanner =  new Scanner(System.in);
+        int sum = 0;
+        int singleDigit = 1;
+
+        System.out.print("n: ");
+        int number = scanner.nextInt();
+
+
+
+            while (number > 0) {
+                singleDigit = number % 10;
+                sum = (sum + (singleDigit * singleDigit));
+                number = number / 10;
+            }
+
+            number = sum;
+
+
+        if (number == 1) {
+            System.out.println("Happy number!");
+
+        }
+        else {
+            System.out.println("Sad number!");
+        }
     }
 
     public static void main(String[] args){
