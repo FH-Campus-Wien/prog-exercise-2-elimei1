@@ -12,6 +12,7 @@ public class App {
         double largestNumber = 0;
         double num = 1;
         int b;
+        String str = new String("Number 1: 0");
 
             for (b = 0; b < num; b++) {
 
@@ -26,7 +27,7 @@ public class App {
                     if (num > largestNumber) {
                         largestNumber = num;
                     }
-                    if (a == 0) {
+                    if ("true".equals(str)) {
                         System.out.print("No number entered");
                     }
                 }
@@ -126,30 +127,33 @@ public class App {
         int count = 0;
         int b;
         int negativeMarks = 0;
+        double average = 0;
 
         for (b=0; b <= grade; b++) {
+
             for (a = 1; a >= 1; a++) {
                 System.out.print("Mark " + a + ": ");
                 grade = scanner.nextInt();
-                count++;
-                sum = sum + grade;
-
-                double average = sum / count;
-
                 if (grade > 5 || grade < 0) {
                     System.out.println("Invalid mark!");
-                }
-                if (grade == 5) {
-                    negativeMarks++;
+                    a--;
                 }
                 if (grade == 0) {
                     System.out.println("Average: " + String.format("%.2f", average));
                     System.out.println("Negative marks: " + negativeMarks);
                     break;
                 }
+                if (grade == 5) {
+                    negativeMarks++;
+                }
+                if (grade <= 5 && grade >= 1) {
+                    count++;
+                    sum = sum + grade;
 
-        }
+                }
+                average = sum / count;
 
+            }
 
         }
 
