@@ -47,23 +47,28 @@ public class App {
     //todo Task 2
     public void stairs() {
         // input your solution here
+        int num = 0;
+        int lines;
+        int numbers;
+
         System.out.print("n: ");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         if (i <= 0) {
             System.out.println("Invalid number!");
         }
-        String string;
 
-        int lines;
-        int numbers;
         for (lines = 0; lines <= i; lines++) {
-            for (numbers = 1; numbers <= i; numbers++) {
-                if (lines >= numbers)
-                    System.out.print(numbers);
+            for (numbers = 0; numbers < lines; numbers++) {
+                num++;
+                System.out.print(num + " ");
             }
-            System.out.println();
+                if (lines != 0) {
+                    System.out.println();
+                }
+
         }
+
 
     }
 
@@ -75,10 +80,10 @@ public class App {
         int b;
         int c;
         int d;
-        for (b = 1; b <= a; b++) {          // counts up until six lines are reached
-            for (c = 5; c >= b; c--)    //counts down until spaces have reached 1
+        for (b = 1; b <= a; b++) {
+            for (c = 5; c >= b; c--)
                 System.out.print(" ");
-            for (d = 1; d < 2 * b; d++)   // counts up until * have reached 2 times the line number (-1)
+            for (d = 1; d < 2 * b; d++)
                 System.out.print("*");
 
             System.out.print(System.lineSeparator());
