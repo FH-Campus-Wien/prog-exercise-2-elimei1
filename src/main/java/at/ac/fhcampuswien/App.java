@@ -21,6 +21,14 @@ public class App {
                     num = scanner.nextDouble();
 
                     if (num <= 0) {
+                        if (a == 1) {
+                            System.out.print("No number entered.");
+                            System.out.println();
+                            break;
+                        }
+                    }
+
+                    if (num <= 0) {
                         System.out.println("The largest number is " + String.format("%.2f", largestNumber) );
                         break;
                     }
