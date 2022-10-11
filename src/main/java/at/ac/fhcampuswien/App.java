@@ -12,7 +12,6 @@ public class App {
         double largestNumber = 0;
         double num = 1;
         int b;
-        String str = new String("Number 1: 0");
 
             for (b = 0; b < num; b++) {
 
@@ -35,14 +34,9 @@ public class App {
                     if (num > largestNumber) {
                         largestNumber = num;
                     }
-                    if ("true".equals(str)) {
-                        System.out.print("No number entered");
-                    }
                 }
             }
-
     }
-
 
     //todo Task 2
     public void stairs() {
@@ -66,10 +60,7 @@ public class App {
                 if (lines != 0) {
                     System.out.println();
                 }
-
         }
-
-
     }
 
 
@@ -126,7 +117,6 @@ public class App {
                 }
                 System.out.println();
             }
-
         }
     }
 
@@ -165,11 +155,8 @@ public class App {
 
                 }
                 average = sum / count;
-
             }
-
         }
-
     }
 
     //todo Task 6
@@ -186,7 +173,6 @@ public class App {
                 singleDigit = number % 10;
                 sum = (sum + (singleDigit * singleDigit));
                 number = number / 10;
-
             }
             number = sum;
             sum = 0;
@@ -201,7 +187,6 @@ public class App {
 
         return sum;  // java suggests it for me, I don't know why
     }
-
 
 
     public static void main(String[] args){
